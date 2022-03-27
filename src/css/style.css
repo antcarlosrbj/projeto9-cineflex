@@ -1,0 +1,162 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ------------------ HEADER ---------------------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    height: 67px;
+    background-color: #C3CFD9;
+    color: #E8833A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+}
+
+/* ------------------ FOOTER ---------------------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 89px;
+    background-color: #DFE6ED;
+    padding: 14px 10px;
+
+    display: flex;
+}
+
+footer > img {
+    width: 48px;
+    height: 72px;
+    object-fit: contain;
+    margin-right: 10px;
+    border: 0;
+    padding: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px 2px #0000001A;
+    background-color: white;
+}
+
+footer > .infoFilm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer > .infoFilm > p {
+    font-size: 26px;
+    color: #293845;
+    margin: 5px;
+}
+
+/* ------------------ HOME ---------------------- */
+
+.mainHome {
+    margin-top: 67px;
+}
+
+.mainHome > p {
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    color: #293845;
+}
+
+.films {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.films img {
+    width: 130px;
+    height: 190px;
+    object-fit: contain;
+    margin: 20px;
+    border: 0;
+    padding: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px 2px #0000001A;
+}
+
+/* ---------------------- FILM ----------------------- */
+
+.mainFilm {
+    margin-top: 67px;
+    margin-bottom: 117px;
+}
+
+.mainFilm > p {
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    color: #293845;
+}
+
+.date {
+    margin: 0 24px 24px 24px;
+}
+
+.date > p {
+    font-size: 20px;
+    color: #293845;
+}
+
+.sessions {
+    margin: 22px 0 35px 0;
+
+    display: flex;
+}
+
+.session {
+    width: 82px;
+    height: 43px;
+    border-radius: 3px;
+    background-color: #E8833A;
+    margin-right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 18px;
+}
+
+/* ---------------------- SESSION ----------------------- */
+
+.mainSession {
+    margin-top: 67px;
+    margin-bottom: 117px;
+}
+
+.mainSession > p {
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    color: #293845;
+}

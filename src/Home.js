@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './Header';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 
@@ -22,7 +23,7 @@ export default function Home() {
                 <p>Selecione o filme</p>
                 <div className="films">
                     {films.map((film) => {
-                        return <img src={film.posterURL} alt={film.title} key={film.id} />
+                        return <Link to={"film/" + film.id}><img src={film.posterURL} alt={film.title} key={film.id} /></Link>
                     })}
                 </div>
             </main>
