@@ -13,14 +13,19 @@ export default function Home({finalData}) {
 		promise.then(answer => {
 			setFilms(answer.data);
 		});
-        /* Não esquece do erro */
+        
+        promise.catch(erro => {
+            console.log("Status code: " + erro.response.status);
+            console.log("Mensagem de erro: " + erro.response.data);
+        });
+
 	}, []);
 
     return (
         <>
             <Header />
             <main className="mainHome">
-                <p onClick={() => console.log(finalData)}>Selecione o filme</p>
+                <p>Selecione o filme</p>
                 <div className="films">
                     {films.map((film) => {
                         return <Link to={"/film/" + film.id}><img src={film.posterURL} alt={film.title} key={film.id} /></Link>

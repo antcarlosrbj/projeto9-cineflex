@@ -26,7 +26,12 @@ export default function Session({setFinalData}) {
             setMovie(answer.data.movie);
             setDay(answer.data.day);
         });
-        /* Não esquece do erro */
+        
+        promise.catch(erro => {
+            console.log("Status code: " + erro.response.status);
+            console.log("Mensagem de erro: " + erro.response.data);
+        });
+        
     }, []);
 
     let [selectedSeats, setSelectedSeats] = useState([]);
@@ -106,7 +111,7 @@ export default function Session({setFinalData}) {
                     {seats_seats.map(seat => {
 
                         let className = "";
-                        let onclick = () => console.log("Indisponível");
+                        let onclick = () => alert("Esse assento não está disponível");
                         if (seat.isAvailable) {
                             if (isSelectedSeats(seat)) {
                                 className = "seat selected";

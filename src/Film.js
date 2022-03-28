@@ -19,7 +19,12 @@ export default function Film() {
             setFilm(answer.data);
             setSessions(answer.data.days);
         });
-        /* Não esquece do erro */
+
+        promise.catch(erro => {
+            console.log("Status code: " + erro.response.status);
+            console.log("Mensagem de erro: " + erro.response.data);
+        });
+
     }, []);
 
     return (
@@ -34,7 +39,7 @@ export default function Film() {
                             <div className="sessions">
                                 {session.showtimes.map(time => {
                                     return (
-                                        <Link to={"/session/" + time.id}><div className="session">{time.name}</div></Link> /* Enviar time.id pelo Link */
+                                        <Link to={"/session/" + time.id}><div className="session">{time.name}</div></Link>
                                     );
                                 })}
                             </div>
