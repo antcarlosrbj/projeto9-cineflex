@@ -148,6 +148,8 @@ footer > .infoFilm > p {
 .mainSession {
     margin-top: 67px;
     margin-bottom: 117px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .mainSession > p {
@@ -159,4 +161,171 @@ footer > .infoFilm > p {
 
     font-size: 24px;
     color: #293845;
+}
+
+.seats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.seat {
+    width: 26px;
+    height: 26px;
+    border-radius: 14px;
+    background-color: #C3CFD9;
+    border: 1px solid #808F9D;
+    margin: 10px 4px;
+
+    font-size: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitles {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.subtitle {
+    width: 90px;
+    height: 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-size: 13px;
+    color: #4E5A65;
+}
+
+.selected {
+    width: 26px;
+    height: 26px;
+    border-radius: 14px;
+    background-color: #8DD7CF;
+    border: 1px solid #1AAE9E
+}
+
+.available {
+    width: 26px;
+    height: 26px;
+    border-radius: 14px;
+    background-color: #C3CFD9;
+    border: 1px solid #808F9D;
+}
+
+.unavailable {
+    width: 26px;
+    height: 26px;
+    border-radius: 14px;
+    background-color: #FBE192;
+    border: 1px solid #F7C52B
+}
+
+/* ---------------------- FORM ----------------------- */
+
+.form {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form > p {
+    width: 327px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.form > input {
+    width: 312px;
+    height: 51px;
+    border-radius: 3px;
+    border: 1px solid #D4D4D4;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #AFAFAF;
+
+    padding-left: 15px;
+}
+
+.form button {
+    width: 225px;
+    height: 42px;
+    border-radius: 3px;
+    background-color: #E8833A;
+    border: 0;
+    margin-top: 30px;
+
+    font-size: 18px;
+    color: white;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* ---------------------- SUCCESS ----------------------- */
+
+.mainSuccess {
+    margin-top: 67px;
+    margin-bottom: 117px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainSuccess > p {
+    font-size: 26px;
+    color: #247A6B;
+    font-weight: bold;
+    height: 110px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainSuccess > .messageError {
+    color: red;
+}
+
+.film, .tickets, .buyerData {
+    width: 374px;
+    margin-bottom: 25px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.content {
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.mainSuccess button {
+    width: 225px;
+    height: 42px;
+    border-radius: 3px;
+    background-color: #E8833A;
+    border: 0;
+    margin-top: 30px;
+
+    font-size: 18px;
+    color: white;
 }

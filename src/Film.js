@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
@@ -17,7 +17,6 @@ export default function Film() {
 
         promise.then(answer => {
             setFilm(answer.data);
-            console.log(answer.data);
             setSessions(answer.data.days);
         });
         /* Não esquece do erro */
@@ -35,7 +34,7 @@ export default function Film() {
                             <div className="sessions">
                                 {session.showtimes.map(time => {
                                     return (
-                                        <div className="session">{time.name}</div>
+                                        <Link to={"/session/" + time.id}><div className="session">{time.name}</div></Link> /* Enviar time.id pelo Link */
                                     );
                                 })}
                             </div>

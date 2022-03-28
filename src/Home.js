@@ -3,7 +3,7 @@ import axios from 'axios';
 import Header from './Header';
 import { Link } from 'react-router-dom';
 
-export default function Home() {
+export default function Home({finalData}) {
 
     const [films, setFilms] = useState([]);
 
@@ -20,10 +20,10 @@ export default function Home() {
         <>
             <Header />
             <main className="mainHome">
-                <p>Selecione o filme</p>
+                <p onClick={() => console.log(finalData)}>Selecione o filme</p>
                 <div className="films">
                     {films.map((film) => {
-                        return <Link to={"film/" + film.id}><img src={film.posterURL} alt={film.title} key={film.id} /></Link>
+                        return <Link to={"/film/" + film.id}><img src={film.posterURL} alt={film.title} key={film.id} /></Link>
                     })}
                 </div>
             </main>
